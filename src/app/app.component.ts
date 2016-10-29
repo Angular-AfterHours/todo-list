@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       {{title}}
     </h1>
     
-    <todo-input></todo-input>
+    <todo-input (submit)="addItem($event)"></todo-input>
     
     <ul>
       <li *ngFor="let item of todoList">
@@ -18,14 +18,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private title: string = 'My Todos';
+  private title:string = 'My Todos';
 
   private todoList = [
-    {title: 'install NodeJS'},
-    {title: 'install Angular CLI'},
-    {title: 'create new app'},
-    {title: 'serve app'},
-    {title: 'develop app'},
-    {title: 'deploy app'},
+    { title: 'install NodeJS' },
+    { title: 'install Angular CLI' },
+    { title: 'create new app' },
+    { title: 'serve app' },
+    { title: 'develop app' },
+    { title: 'deploy app' },
   ];
+
+  addItem(title:string) {
+    this.todoList.push({ title });
+  }
 }
