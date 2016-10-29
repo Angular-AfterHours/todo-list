@@ -26,6 +26,15 @@ export class TodoListStorageService {
 
   put(item) {
     this.todoList.push(item);
+    return this.update();
+  }
+
+  destroy(item) {
+    this.todoList.splice(this.todoList.indexOf(item), 1);
+    return this.update();
+  }
+
+  private update() {
     localStorage.setItem(storageName, JSON.stringify(this.todoList));
     return this.get();
   }
