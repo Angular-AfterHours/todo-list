@@ -1,11 +1,13 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'todo-input',
   template: `
     <input #inputElem 
            [value]="title"
-           (keyup.enter)="changeTitle($event.target.value)">
+           (keyup.enter)="changeTitle($event.target.value)" 
+           (blur)="cancelEdit($event.target)"
+           (keyup.esc)="$event.target.blur()">
            
     <button (click)="changeTitle(inputElem.value)">
       Save
@@ -14,8 +16,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
+  @Input() title:string = '';
   @Output() submit:EventEmitter<string> = new EventEmitter();
-  private title:string = '';
+  @Output() cancel:EventEmitter<any> = new EventEmitter();
 
   constructor() {
   }
@@ -25,6 +28,11 @@ export class InputComponent implements OnInit {
 
   changeTitle(newTitle:string):void {
     this.submit.emit(newTitle);
+  }
+
+  cancelEdit(inputElem) {
+    inputElem.value = this.title || inputElem.value;
+    this.cancel.emit();
   }
 
 }
