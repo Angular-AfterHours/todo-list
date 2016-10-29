@@ -8,6 +8,7 @@ import { InputComponent } from './input/input.component';
 import { ItemComponent } from './todo-item/item.component';
 import { ListManagerComponent } from './list-manager/list-manager.component';
 import { TodoListService } from './todo-list.service';
+import { TodoListStorageService } from './todo-list-storage.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { TodoListService } from './todo-list.service';
     FormsModule,
     HttpModule
   ],
-  providers: [TodoListService],
+  providers: [TodoListService, TodoListStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
