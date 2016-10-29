@@ -12,7 +12,7 @@ import { TodoListService } from '../todo-list.service';
     
     <ul>
       <li *ngFor="let item of todoList">
-        <todo-item [itemTitle]="item.title"></todo-item>
+        <todo-item [item]="item"></todo-item>
       </li>
     </ul>
   `,

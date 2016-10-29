@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
     <input type="checkbox">
     
-    {{ itemTitle }}
+    {{ item.title }}
     
     <button>
       remove
@@ -14,9 +14,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
-  @Input() itemTitle: string;
+  @Input() item;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
