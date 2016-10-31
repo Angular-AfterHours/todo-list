@@ -3,6 +3,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'todo-item',
   template: `
+    <div class="todoItem">
     <input type="checkbox">
     
     <span [hidden]="editing" 
@@ -13,9 +14,10 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
                 (submit)="changeItemTitle($event)" (cancel)="cancelEdit($event)">               
     </todo-input>
     
-    <button (click)="removeItem()">
+    <button class="btn btnRed" (click)="removeItem()">
       remove
     </button>
+    </div>
   `,
   styleUrls: ['./item.component.css']
 })
