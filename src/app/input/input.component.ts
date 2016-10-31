@@ -3,15 +3,18 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 @Component({
   selector: 'todo-input',
   template: `
-    <input #inputElem 
+  
+      <input class="todoInput" #inputElem 
            [value]="title"
+           placeholder="Add something to do..."
            (keyup.enter)="changeTitle($event.target.value)" 
            (blur)="cancelEdit($event.target)"
            (keyup.esc)="$event.target.blur()">
            
-    <button (click)="changeTitle(inputElem.value)">
-      Save
-    </button>
+      <button class="btn" (click)="changeTitle(inputElem.value)">
+        Save
+     </button>
+   
   `,
   styleUrls: ['./input.component.css']
 })

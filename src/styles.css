@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background: #f1f1f1;
+    font-size: 16px;
+	line-height: 22px;
+	color: #404040;
+    font-family: 'Lucida Grande', Verdana, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.todoMain { background: #ffffff; padding: 20px; width: 400px; box-shadow: 0 0 6px 0 #ddd; margin: 25px auto 0;}
+.todoMain h1 { font-size: 50px; line-height: 52px; color: dodgerblue;  margin-bottom: 20px;}
+.todoAdd {margin-bottom: 20px;}
+.todoInput {padding: 4px 10px 4px;  font-size: 16px; font-family: 'Lucida Grande', Verdana, sans-serif;line-height: 20px; border: solid 1px #dddddd; border-radius: 5px;}
+.btn { background: lightseagreen; color: #fff;  padding: 3px 10px; margin: 0 auto; border: none;  border-radius: 5px; font-size: 12px; line-height: 24px; cursor: pointer;}
+.btn:hover {background: lightslategrey;}
+.btnRed {background: red; float:right;}
+.btnRed:hover {background: darkred;}
+.todoItem {padding: 10px 0; border-top: solid 1px #ddd; min-height: 30px;}
+.todoAdd {margin-bottom: 30px;}
+.todoAdd input {width: 325px}
+
+.todo h1 { font-size: 52px; line-height: 52px;  margin-bottom: 30px; font-weight: bold; text-align: center; letter-spacing: -0.8px;}
+.todo {
+  position: relative;
+  width: 400px;
+  padding: 30px 30px 15px;
+  background: white;
+  border: 1px solid;
+  border-color: #dfdcdc #d9d6d6 #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+.todo:before, .todo:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 4px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.todo:after {
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.todo:before {
+  bottom: -5px;
+  left: 2px;
+  right: 2px;
+  border-color: #c4c4c4;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
