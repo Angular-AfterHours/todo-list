@@ -3,20 +3,22 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'todo-item',
   template: `
-    <div class="todoItem">
-    <input type="checkbox">
-    
-    <span [hidden]="editing" 
-          (click)="editItem()">{{ item.title }}</span>
-    
-    <todo-input [hidden]="!editing"
-                [title]="item.title"
-                (submit)="changeItemTitle($event)" (cancel)="cancelEdit($event)">               
-    </todo-input>
-    
-    <button class="btn btnRed" (click)="removeItem()">
-      remove
-    </button>
+    <div class="todo-item">
+      <input class="todo-checkbox"
+             type="checkbox">
+      
+      <span class="todo-title"
+            [hidden]="editing" 
+            (click)="editItem()">{{ item.title }}</span>
+      
+      <todo-input [hidden]="!editing"
+                  [title]="item.title"
+                  (submit)="changeItemTitle($event)" (cancel)="cancelEdit($event)">               
+      </todo-input>
+      
+      <button class="btn btn-red" (click)="removeItem()">
+        remove
+      </button>
     </div>
   `,
   styleUrls: ['./item.component.css']

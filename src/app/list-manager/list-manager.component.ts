@@ -4,11 +4,11 @@ import { TodoListService } from '../todo-list.service';
 @Component({
   selector: 'todo-list-manager',
   template: `
-    <div class="todo">
+    <div class="todo-app">
       <h1>
         {{title}}
       </h1>
-      <div class="todoAdd">
+      <div class="todo-add">
         <todo-input (submit)="addItem($event)"></todo-input>
       </div>
       <ul>
